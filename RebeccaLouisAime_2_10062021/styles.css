@@ -1,4 +1,11 @@
-body
+/*Les couleurs de la charte sont le bleu #0065FC, en plus clair #DEEBFFpour le fond le gris #F2F2F2.
+ La police du site est Raleway.*/
+div
 {
     font-family: 'Raleway', sans-serif;
+}
+#conteneur
+{
+    display: flex;
+    flex-direction: row;
 }
