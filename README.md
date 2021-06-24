@@ -19,7 +19,7 @@
         <header>
             <h1>Un peu à mon sujet</h1>
         </header>
-        <p>Je m'appelle Rebecca Louis Aime, j'ai 35ans.Aprés plusieurs années à chercher ma voie,
+        <p>Je m'appelle Rebecca Louis Aime, j'ai 35ans. Aprés plusieurs années à chercher ma voie,
    j'ai décidé d'entamer une formation dans de web developpeur.</p>
 
     </section>
