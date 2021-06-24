@@ -176,10 +176,10 @@ span{
     justify-content: center;
     background-color: white;
     width: 260px;
-    height: 240px;
+    height: 200px;
     border-radius: 25px;
     margin: 5px;
-   align-content: center;
+   align-content: flex-start;
 }
 .heb img{
     width: 250px;
