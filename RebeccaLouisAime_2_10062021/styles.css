@@ -1,285 +1,295 @@
 /*Les couleurs de la charte sont le bleu #0065FC, en plus clair #DEEBFF pour le fond le gris #F2F2F2.
  La police du site est Raleway.*/
  body{
-     margin: 0;
-     font-family: 'Raleway', sans-serif;
-     font-weight: 400;
-     font-size: .9em;
-     margin: auto;
-     width: 95%;
-     max-width: 1500px;
- }
- /*Header*/
- h1{
-     font-weight: bold;
-     font-size: 1.5em;
-     padding-top: 20px;
- }
- h2{
-     font-size: 1.1em;
-     font-weight: 500;
- }
- a:link
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: .9em;
+    margin: auto;
+    width: 95%;
+    max-width: 1500px;
+}
+/*Header*/
+h1{
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 20px;
+}
+h2{
+    font-size: 1.1em;
+    font-weight: 500;
+}
+a:link
 {
-    text-decoration: none;
-    color: black;
+   text-decoration: none;
+   color: black;
 }
 ul{
-    list-style: none;
+   list-style: none;
 }
 span{
-    font-weight: bold;
-    font-size: 1.1em;
+   font-weight: bold;
+   font-size: 1.1em;
 }
 /*menu*/
 
 .nav_menu{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 30px;
 }
 .menu{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: auto;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   padding: auto;
 }
 .bt_menu{
-    margin-right: 25px;
+   margin-right: 25px;
 }
 .bt_menu a:hover{
-    text-decoration-line: overline;
-    color: #0065FC;
+   text-decoration-line: overline;
+   color: #0065FC;
 }
 .bt_menu a{
-    color: black;
+   color: black;
 }
 .bt_inscrire{
-    font-weight: bold;
-    color: #0065FC;
+   font-weight: bold;
+   color: #0065FC;
 }
 .presentation{
-    text-align: left;
-    justify-content: start;
-    width: 60%;
+   text-align: left;
+   justify-content: start;
+   width: 60%;
 }
 /*section recherche, information*/
 .bar_search{
-    display: inline-flex;
-    flex-direction: row;
-    margin-top: 15px;
-    margin-bottom: 35px;
+   display: inline-flex;
+   flex-direction: row;
+   margin-top: 15px;
+   margin-bottom: 35px;
 
 }
 .icone_search i{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #F2F2F2;
-    border: 1px #F2F2F2 solid;
-    border-radius: 15px 0px 0px 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background-color: #F2F2F2;
+   border: 1px #F2F2F2 solid;
+   border-radius: 15px 0px 0px 15px;
 }
 .text_search{
-    background-color: white;
-    border: none;
-    border-top: 1px #F2F2F2 solid;
-    border-bottom: 1px #F2F2F2 solid;
-    width: 200;
-    height: 40px;
-    padding-left: 15px;
-    font-size: 1.2em;
-    font-weight: 400;
+   background-color: white;
+   border: none;
+   border-top: 1px #F2F2F2 solid;
+   border-bottom: 1px #F2F2F2 solid;
+   width: 200;
+   height: 40px;
+   padding-left: 15px;
+   font-size: 1.2em;
+   font-weight: 400;
 }
 .buton_search{
-    background-color: #0065FC;
-    border: none;
-    border-radius: 0px 15px 15px 0px;
-    height: 40px;
-    font-weight: 500;
-    font-size: 1.3em;
-    color: white;
+   background-color: #0065FC;
+   border: none;
+   border-radius: 0px 15px 15px 0px;
+   height: 40px;
+   font-weight: 500;
+   font-size: 1.3em;
+   color: white;
 }
 /*Section filtres ssur une ligne composé de vignette colorée[bleu #0065FC] en cerclé[bleu clair #DEEBFF] et d'un texte tout deux evelopper dans une bordure [gris #F2F2F2]*/
 .filtres{
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
 }
 .bt_filtres{
-    margin-left: 20px;
-    background-color: white;
-    border: 2px #F2F2F2 solid;
-    border-radius: 25px;
-    font-size: 1.2em;
-    font-weight: 500;
+   margin-left: 20px;
+   background-color: white;
+   border: 2px #F2F2F2 solid;
+   border-radius: 25px;
+   font-size: 1.2em;
+   font-weight: 500;
 
 }
 .bt_filtres i{
-    background-color: #DEEBFF;
-    border: 10px #DEEBFF solid;
-    border-radius: 50%;
-    color: #0065FC;
-    margin-right: 10px;
+   background-color: #DEEBFF;
+   border: 10px #DEEBFF solid;
+   border-radius: 50%;
+   color: #0065FC;
+   margin-right: 10px;
 }
 /*Ligne information une ligne avec l'icone au dédut du bloc à gauche*/
 .info{
-    font-size: 1.em;
+   font-size: 1.em;
 }
 .info i{
-    background-color: white;
-    border: 1px #F2F2F2 solid;
-    border-radius: 50%;
-    color: #0065FC;
-    align-items: center;
-    padding: 10px 15px 10px 15px;
-    margin-right: 20px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+   background-color: white;
+   border: 1px #F2F2F2 solid;
+   border-radius: 50%;
+   color: #0065FC;
+   align-items: center;
+   padding: 10px 15px 10px 15px;
+   margin-right: 20px;
+   margin-top: 5px;
+   margin-bottom: 10px;
 }
 /*Section général pour hébergement et populaire*/
 .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: 1500px;
-    height: 700;
-    width: 1500px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+   max-width: 1500px;
+   height: 600;
+   width: 1500px;
 }
 /*Section hébergement*/
 .h_marseille{
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    text-align: left;
+   margin: 20;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 30px;
+   text-align: left;
 }
-.listehebergements{
+.hebergements{
     display: inline-flex;
     flex-flow: column wrap;
     justify-content: space-evenly;
     background-color:  #F2F2F2;
-    border: none;
     border-radius: 17px;
-    width: 950px;
-    height: 600px;
-    align-content: center;
 }
-.heb{
-    display: inline-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    background-color: white;
-    width: 260px;
-    height: 240px;
-    border-radius: 25px;
-    margin: 5px;
+.listehebergements{
+   display: inline-flex;
+   flex-flow: column wrap;
+   justify-content: space-evenly;
+   border: none;
+   width: 950px;
+   height: 600px;
    align-content: center;
 }
+.heb{
+   display: inline-flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   background-color: white;
+   width: 260px;
+   height: 200px;
+   border-radius: 25px;
+   margin: 10px;
+  align-content: flex-start;
+}
 .heb img{
-    width: 250px;
-    height: 125px;
-    border: 5px solid white;
-    border-radius: 25px 25px 0px 0px ;
-    object-fit: cover;
+   width: 250px;
+   height: 125px;
+   border: 5px solid white;
+   border-radius: 25px 25px 0px 0px ;
+   object-fit: cover;
 }
 .heb_text{
-    justify-content: center;
-    text-align: left;
+   justify-content: center;
+   text-align: left;
 }
 .afficher{
-    margin-left: 30px;
-    font-size: 1.3em;
-    font-weight: 500;
-    text-align: left;
+   margin-left: 30px;
+   font-size: 1.3em;
+   font-weight: 500;
+   text-align: left;
 }
 /*Section populaire, bord droit l'élément est en colonne de trois vignettre qui prend l'ensemble de l'espace donné est composé d'une image en début de bloc et le texte à sa droite. Ne pas oublié étoile bleu de satisfation situé en dessous du texte.*/
 .populaires h3{
-    margin: 0;
-    padding-top: 10px;
-    padding-left: 50px;
-    padding-bottom: 10px;
-    text-align: left;
+   margin: 0;
+   padding-top: 10px;
+   padding-left: 50px;
+   padding-bottom: 10px;
+   text-align: left;
 }
 h3 i{/*Icone populaire bord droit*/
-    margin-left: 130px;
+   margin-left: 130px;
 }
 .listepopulaires{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color:  #F2F2F2;
-    border: none;
-    border-radius: 17px;
-    width: 400px;
-    height: 600px;
-    align-items: center;
-    margin: 5px 0px 5px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   background-color:  #F2F2F2;
+   border: none;
+   border-radius: 17px;
+   width: 400px;
+   height: 600px;
+   align-items: center;
+   margin: 5px 0px 5px 0px;
 }
 .pop{
-    display: inline-flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    background-color: white;
-    width: 360px;
-    height: 150px;
-    border-radius: 25px;
-    margin: 5px;
-    text-align: center;
+   display: inline-flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   background-color: white;
+   width: 360px;
+   height: 150px;
+   border-radius: 25px;
+   margin: 5px;
+   text-align: center;
 }
 .pop img{
-    width: 150px;
-    height: 140px;
-    border: 5px solid white;
-    border-radius: 25px 0px 0px 25px ;
-    object-fit: cover;
-    text-align: left;
+   width: 150px;
+   height: 140px;
+   border: 5px solid white;
+   border-radius: 25px 0px 0px 25px ;
+   object-fit: cover;
+   text-align: left;
 }
 .pop_text{
 justify-content: right;
 text-align: center;
 }
 /*Section aside activité. Se situe avant le footer et prend l'ensemble de la page.*/
+.activités{
+   display: flex;
+   flex-flow: column wrap;
+   height: 500px;
+}
 .listeactivités{
-    display: flex;
-    flex-flow: column wrap;
-    height: 500px;
+        display:  inline-flex;
+        flex-flow: row wrap;
+        height: 500px;
 }
 .act{
-    display: inline-flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 25px;
+   display: inline-flex;
+   flex-direction: row;
+   background-color: white;
+   border-radius: 25px;
 }
 .act1{
-    flex-direction:row;
-    background-color: white;
-    border-radius: 25px;
+   flex-direction:row;
+   background-color: white;
+   border-radius: 25px;
 }
 .act img{
-    max-width: 100%;
-    width: 20%;
-    border: none;
-    border-radius: 25px 25px 0px 0px ;
-    object-fit: cover;;
+   max-width: 100%;
+   width: 20%;
+   border: none;
+   border-radius: 25px 25px 0px 0px ;
+   object-fit: cover;
 }
 /*Footer a propos alignement gauche, espacement entre les elements*/
 footer
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: justify;
-    background-color: #F2F2F2;
-    align-items: flex-start;
-    width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   text-align: justify;
+   background-color: #F2F2F2;
+   align-items: flex-start;
+   width: 100%;
 }
 footer h3{
-    text-align: left;
-    margin: 30px;
+   text-align: left;
+   margin: 30px;
 }
