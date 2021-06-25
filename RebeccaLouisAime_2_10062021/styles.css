@@ -1,3 +1,6 @@
+*{
+    outline: 1px red solid;
+}
 /*Les couleurs de la charte sont le bleu #0065FC, en plus clair #DEEBFF pour le fond le gris #F2F2F2.
  La police du site est Raleway.*/
  body{
@@ -32,31 +35,40 @@ span{
    font-size: 1.1em;
 }
 /*menu*/
-
+.logo{
+    margin-top: 30px;
+}
 .nav_menu{
    display: flex;
    flex-flow: row wrap;
    justify-content: space-between;
    align-items: center;
-   margin-top: 30px;
 }
 .menu{
    display: flex;
    flex-flow: row wrap;
    justify-content: space-evenly;
-   padding: auto;
+   height: 10vh;
+   align-content: flex-end;
 }
 .bt_menu{
+    display: flex;
+    border-top: 1px transparent solid;
    margin-right: 25px;
+   height: 100%;
+  align-items: flex-end;
 }
-.bt_menu a:hover{
-   text-decoration-line: overline;
-   color: #0065FC;
+.bt_menu:hover{
+    border-top: 1px #0065FC solid;
+    color: #0065FC;
 }
 .bt_menu a{
    color: black;
 }
-.bt_inscrire{
+.bt_menu:hover a{
+    color: #0065FC;
+}
+.bt_inscrire a{
    font-weight: bold;
    color: #0065FC;
 }
@@ -250,33 +262,25 @@ justify-content: right;
 text-align: center;
 }
 /*Section aside activité. Se situe avant le footer et prend l'ensemble de la page.*/
-.activités{
+.container_activites{
    display: flex;
    flex-flow: column wrap;
    height: 500px;
 }
-.listeactivités{
-        display:  inline-flex;
-        flex-flow: row wrap;
-        height: 500px;
+.activites{
+   display: flex;
+   flex-flow: column wrap;
+}
+.listeactivites div{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
 }
 .act{
-   display: inline-flex;
-   flex-direction: row;
-   background-color: white;
-   border-radius: 25px;
+    height: 100%;
 }
-.act1{
-   flex-direction:row;
-   background-color: white;
-   border-radius: 25px;
-}
-.act img{
-   max-width: 100%;
-   width: 20%;
-   border: none;
-   border-radius: 25px 25px 0px 0px ;
-   object-fit: cover;
+.act_min{
+    height: 40%;
 }
 /*Footer a propos alignement gauche, espacement entre les elements*/
 footer
