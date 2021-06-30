@@ -56,7 +56,7 @@ span{
   align-items: flex-end;
 }
 .bt_menu:hover{
-    border-top: 1px #0065FC solid;
+    border-top: 2px #0065FC solid;
     color: #0065FC;
 }
 .bt_menu a{
@@ -125,6 +125,7 @@ span{
    border-radius: 25px;
    font-size: 1.2em;
    font-weight: 500;
+   cursor:pointer
 
 }
 .bt_filtres i{
@@ -133,6 +134,37 @@ span{
    border-radius: 50%;
    color: #0065FC;
    margin-right: 10px;
+} 
+   .pulsation{
+      
+   background:linear-gradient(135deg, #ffffff 0%,#ffffff 100%);
+   animation: pulsation 1s infinite alternate
+      
+      }
+   
+   @keyframes pulsation{
+      
+   from{
+      
+      box-shadow:0 0 5px hsl(216, 100%, 49%)
+      
+      }
+   to{
+   
+      box-shadow:0 0 15px hsl(216, 100%, 94%)
+      
+      }
+      
+      }	
+.pulsation:hover{
+   animation: pulsation_bouton 0.8s ease-in;
+}
+@keyframes pulsation_buton{
+   from{
+      box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(216,100%,49%)
+   }
+   to{
+      box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(216,100%,94%,0)}
 }
 /*Ligne information une ligne avec l'icone au dédut du bloc à gauche*/
 .info{
@@ -146,8 +178,8 @@ span{
    align-items: center;
    padding: 10px 15px 10px 15px;
    margin-right: 20px;
-   margin-top: 5px;
-   margin-bottom: 10px;
+   margin-top: 10px;
+   margin-bottom: 15px;
 }
 /*Section général pour hébergement et populaire*/
 .container{
@@ -176,7 +208,7 @@ span{
     justify-content: space-evenly;
     background-color:  #F2F2F2;
     border-radius: 17px;
-    width: 950px;
+    width: 1000px;
     height: 600px;
 }
 .listehebergements{
@@ -192,14 +224,14 @@ span{
    justify-content: center;
    background-color: white;
    box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
-   width: 260px;
+   width: 300px;
    height: 200px;
    border-radius: 25px;
    margin: 10px;
   align-content: flex-start;
 }
 .heb img{
-   width: 250px;
+   width: 290px;
    height: 125px;
    border: 5px solid white;
    border-radius: 25px 25px 0px 0px ;
@@ -208,16 +240,25 @@ span{
 .heb_text{
    width: 100%;
    text-align: left;
-   padding: 15px;
+   padding-left: 15px;
+}
+.fa-star{
+   color: #F2F2F2;
+}
+.bleu{
+   color: #0065FC;
 }
 .afficher{
    display: flex;
    align-items: center;
    margin-left: 30px;
    font-size: 1.3em;
-   font-weight: 500;
+   font-weight: bold;
    text-align: left;
    width: 100%;
+}
+.afficher a{
+   color: black;
 }
 /*Section populaire, bord droit l'élément est en colonne de trois vignettre qui prend l'ensemble de l'espace donné est composé d'une image en début de bloc et le texte à sa droite. Ne pas oublié étoile bleu de satisfation situé en dessous du texte.*/
 .populaires h3{
@@ -235,6 +276,7 @@ h3 i{/*Icone populaire bord droit*/
 .populaires{
    display: flex;
    flex-direction: column;
+   flex-wrap: wrap;
    justify-content: space-evenly;
    background-color:  #F2F2F2;
    border-radius: 17px;
@@ -251,7 +293,7 @@ h3 i{/*Icone populaire bord droit*/
 }
 .pop{
    display: inline-flex;
-   flex-flow: row nowrap;
+   flex-flow: row wrap;
    align-items: center;
    background-color: white;
    box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
@@ -287,6 +329,7 @@ text-align: center;
    align-items: stretch;
    max-width: 1500px;
    height: 550px;
+   margin-top: 20px;
   /* background-color: rgb(6, 62, 70);*/
 }
 .listeactivites{
@@ -294,11 +337,13 @@ text-align: center;
    max-height: 500px;
    display: flex;
    flex-wrap: wrap;
-   align-items: stretch;
    justify-content: space-between;
+   align-content: space-between;
    flex-direction: column;
-  /* background-color: rgb(179, 255, 0);*/
-   text-align: center;
+}
+.actives{
+   display: flex;
+   flex-wrap: wrap;
 }
 .act{
    display: flex;
@@ -309,9 +354,8 @@ text-align: center;
    align-content: flex-start;
    width: 325px;
    background-color: white;
-   justify-content: space-between;
+   justify-content: space-evenly;
    border-radius: 25px;
-   align-items: center;
    box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
 }
 .act_min{
@@ -319,13 +363,15 @@ text-align: center;
    flex-wrap: wrap;
    flex-direction: column;
    align-items: flex-start;
-   justify-content: space-between;
+   justify-content: space-evenly;
    height: 225px;
    width: 325px;
    background-color: white;
    border-radius: 25px;
 }
 .act img{
+   display: flex;
+   flex-wrap: wrap;
    height: 450px;
    width: 100%;
    border: 0px solid transparent;
@@ -333,29 +379,46 @@ text-align: center;
    border-radius: 25px 25px 0px 0px;
 }
 .act_min img{
+   display: flex;
+   flex-wrap: wrap;
    height: 175px;
 }
-.act_text{
-   text-align: center;
+.act_text a{
+   font-weight: bold;
+   font-size: 1em;
+   padding-left: 8px;
+   color: black;
 }
-.act_text_two{
-   text-align: center;
+.act_text_two a{
+   font-weight: bold;
+   font-size: 1em;
+   padding-left: 8px;
+   color: black;
 }
 
 /*Footer a propos alignement gauche, espacement entre les elements*/
 footer
 {
-   display: flex;
-   flex-direction: row;
+   display: inline-flex;
+   flex-direction: column;
    flex-wrap: wrap;
    text-align: left;
    justify-content: flex-start;
    background-color: #F2F2F2;
-   align-content: flex-start;
    width: 100%;
    margin-top: 50px;
 }
+.a_propos{
+   display: inline-flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 75%;
+}
+.a_propos li{
+   padding-bottom: 5px;
+}
 footer h3{
    text-align: left;
-   margin: 30px;
+   margin: 30px 30px 5px 30px;
 }
