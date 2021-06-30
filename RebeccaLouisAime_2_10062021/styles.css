@@ -157,41 +157,44 @@ span{
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-evenly;
+   justify-content: space-between;
    align-items: center;
    max-width: 1500px;
-   height: 600;
-   width: 1500px;
+   height: 600px;
 }
 /*Section hébergement*/
 .h_marseille{
-   margin: 20;
+   display: flex;
+   align-items: center;
+   margin: 0;
    padding-top: 10px;
    padding-bottom: 10px;
    padding-left: 30px;
    text-align: left;
+   width: 100%;
 }
 .hebergements{
-    display: inline-flex;
-    flex-flow: column wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     background-color:  #F2F2F2;
     border-radius: 17px;
+    width: 950px;
+    height: 600px;
 }
 .listehebergements{
    display: inline-flex;
-   flex-flow: column wrap;
+   flex-flow: row wrap;
    justify-content: space-evenly;
+   align-items: center;
    border: none;
-   width: 950px;
-   height: 600px;
-   align-content: center;
 }
 .heb{
    display: inline-flex;
    flex-flow: row wrap;
    justify-content: center;
    background-color: white;
+   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
    width: 260px;
    height: 200px;
    border-radius: 25px;
@@ -206,36 +209,47 @@ span{
    object-fit: cover;
 }
 .heb_text{
-   justify-content: center;
+   width: 100%;
    text-align: left;
+   padding: 15px;
 }
 .afficher{
+   display: flex;
+   align-items: center;
    margin-left: 30px;
    font-size: 1.3em;
    font-weight: 500;
    text-align: left;
+   width: 100%;
 }
 /*Section populaire, bord droit l'élément est en colonne de trois vignettre qui prend l'ensemble de l'espace donné est composé d'une image en début de bloc et le texte à sa droite. Ne pas oublié étoile bleu de satisfation situé en dessous du texte.*/
 .populaires h3{
+
    margin: 0;
    padding-top: 10px;
-   padding-left: 50px;
+   padding-left: 20px;
    padding-bottom: 10px;
    text-align: left;
+   width: 100%;
 }
 h3 i{/*Icone populaire bord droit*/
    margin-left: 130px;
 }
-.listepopulaires{
+.populaires{
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
    background-color:  #F2F2F2;
-   border: none;
    border-radius: 17px;
    width: 400px;
    height: 600px;
+}
+.listepopulaires{
+   display: inline-flex;
+   flex-flow: column wrap;
+   justify-content: space-evenly;
    align-items: center;
+   border: none;
    margin: 5px 0px 5px 0px;
 }
 .pop{
@@ -243,10 +257,11 @@ h3 i{/*Icone populaire bord droit*/
    flex-flow: row nowrap;
    align-items: center;
    background-color: white;
+   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
    width: 360px;
    height: 150px;
    border-radius: 25px;
-   margin: 5px;
+   margin: 10px;
    text-align: center;
 }
 .pop img{
@@ -262,36 +277,86 @@ justify-content: right;
 text-align: center;
 }
 /*Section aside activité. Se situe avant le footer et prend l'ensemble de la page.*/
+.container_activites h3{
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
 .container_activites{
    display: flex;
-   flex-flow: column wrap;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: stretch;
+   max-width: 1500px;
+   height: 550px;
+  /* background-color: rgb(6, 62, 70);*/
+}
+.listeactivites{
    height: 500px;
-}
-.activites{
+   max-height: 500px;
    display: flex;
-   flex-flow: column wrap;
-}
-.listeactivites div{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+   flex-wrap: wrap;
+   align-items: stretch;
+   justify-content: space-between;
+   flex-direction: column;
+  /* background-color: rgb(179, 255, 0);*/
+   text-align: center;
 }
 .act{
-    height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   max-height: 500px;
+   height: 100%;
+   align-content: flex-start;
+   width: 325px;
+   background-color: white;
+   justify-content: space-between;
+   border-radius: 25px;
+   align-items: center;
+   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
 }
 .act_min{
-    height: 40%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-between;
+   height: 225px;
+   width: 325px;
+   background-color: white;
+   border-radius: 25px;
 }
+.act img{
+   height: 450px;
+   width: 100%;
+   border: 0px solid transparent;
+   object-fit: cover;
+   border-radius: 25px 25px 0px 0px;
+}
+.act_min img{
+   height: 175px;
+}
+.act_text{
+   text-align: center;
+}
+.act_text_two{
+   text-align: center;
+}
+
 /*Footer a propos alignement gauche, espacement entre les elements*/
 footer
 {
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
-   text-align: justify;
+   flex-wrap: wrap;
+   text-align: left;
+   justify-content: flex-start;
    background-color: #F2F2F2;
-   align-items: flex-start;
+   align-content: flex-start;
    width: 100%;
+   margin-top: 50px;
 }
 footer h3{
    text-align: left;
