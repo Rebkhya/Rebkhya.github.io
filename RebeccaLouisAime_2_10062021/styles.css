@@ -1,147 +1,268 @@
-/*Les couleurs de la charte sont le bleu #0065FC, en plus clair #DEEBFF pour le fond le gris #F2F2F2.
- La police du site est Raleway.*/
- body{
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: .9em;
-    margin: auto;
-    width: 95%;
-    max-width: 1500px;
+/**{
+    outline: 1px red solid;
+ }*/
+ /*Les couleurs de la charte sont le bleu #0065FC, en plus clair #DEEBFF pour le fond le gris #F2F2F2.
+  La police du site est Raleway.*/
+  /*Element general*/
+  body{
+   display: flex;
+   justify-content: center;
+   font-family: 'Raleway', sans-serif;
 }
-/*Header*/
+.main_container{
+   max-width: 1400px;
+   margin-top: 10px;
+}
+.flex_row{
+   display: flex;
+   flex-direction: row;
+}
+.flex_column{
+   display: flex;
+   flex-direction: column;
+}
+.class_card{
+   background-color: white;
+   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 20%);
+   border-radius: 25px;
+}
 h1{
-    font-weight: bold;
-    font-size: 1.5em;
-    padding-top: 20px;
+   font-weight: bold;
+   font-size: 1.9em;
 }
 h2{
-    font-size: 1.1em;
-    font-weight: 500;
+   font-weight: 700;
+   font-size: 1.6em;
 }
-a:link
-{
-   text-decoration: none;
-   color: black;
+h3{
+   font-weight: 600;
+   font-size: 1.3em;
+   overflow-wrap: break-word;
 }
 ul{
    list-style: none;
 }
-span{
-   font-weight: bold;
-   font-size: 1.1em;
+a{
+   text-decoration: none;
+   color: black;
 }
-/*menu*/
-.logo{
-    margin-top: 30px;
+.stars{
+   flex-wrap: nowrap;
+   color: #F2F2F2;
+   padding-bottom: 10px;
+   width: 100%;
 }
-.nav_menu{
+.bleu{
+   color: #0065FC;
+}
+@media all and (max-device-width: 575.98px) {
+   .main_container{
+       width: auto;
+       height: auto;
+       margin: 0;
+   }
+}
+@media all and (max-device-width: 767.98px) {
+    .main_container{
+        width: auto;
+        height: auto;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+}
+/*Header*/
+.header{
    display: flex;
-   flex-flow: row wrap;
    justify-content: space-between;
-   align-items: center;
+   height: auto;
+   margin-top: 10px;
+}
+.base_menu{
+   display: flex;
+   height: 100%;
+   font-weight: bold;
+   padding: 0px 10px 0px 10px;
+   align-items: flex-end;
 }
 .menu{
    display: flex;
-   flex-flow: row wrap;
-   justify-content: space-evenly;
-   height: 10vh;
-   align-content: flex-end;
+   justify-content: flex-end;
+   width: 100%;
+   height: auto;
 }
 .bt_menu{
-    display: flex;
-    border-top: 1px transparent solid;
-   margin-right: 25px;
-   height: 100%;
-  align-items: flex-end;
+   display: flex;
+   border-top: 2px solid transparent;
+   font-size: 1em;
 }
+@media all and (max-device-width: 575.98px) {
+   .header{
+       display: flex;
+       flex-direction: row;
+       align-items: flex-start;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       width: auto;
+       height: auto;
+   }
+   .header img{
+       order: -2;
+       padding: 0px 0px 5px 5px;
+   }
+   .menu{
+       display: flex;
+       flex-direction: row;
+   }
+   .bt_menu{
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+       order: 1;
+       width: 100%;
+       padding: 15px 0px 10px 0px;
+       border-top: none;
+       border-bottom: 2px solid #F2F2F2;
+   }
+}
+/*Hover*/
 .bt_menu:hover{
-    border-top: 2px #0065FC solid;
-    color: #0065FC;
-}
-.bt_menu a{
-   color: black;
-}
-.bt_menu:hover a{
-    color: #0065FC;
-}
-.bt_inscrire a{
-   font-weight: bold;
+   border-top: 2px solid #0065FC;
    color: #0065FC;
 }
+.bt_inscrire{
+   color: #0065FC;
+   align-self: flex-end;
+}
+@media all and (max-device-width: 575.98px) {
+   .bt_menu:hover{
+       border-bottom: 2px solid #0065FC;
+       border-top: none;
+       color: #0065FC;
+   }
+   .bt_inscrire{
+       order: -1;
+       justify-content: center;
+       align-items: center;
+       padding: 15px 5px 15px 5px;
+   }
+}
+/*Main*/
+main{
+   padding-top: 20px;
+   padding-bottom: 30px;
+}
+/*section presentation, recherche, filtres et information*/
+/*presentation*/
 .presentation{
-   text-align: left;
-   justify-content: start;
-   width: 60%;
+   height: auto;
+   margin: 0;
 }
-/*section recherche, information*/
-.bar_search{
-   display: inline-flex;
-   flex-direction: row;
-   margin-top: 15px;
-   margin-bottom: 35px;
-
-}
-.icone_search i{
+/*barre de recherche*/
+.bar_recherche{
    display: flex;
+   margin: 15px 0px 0px 0pX;
+}
+.bar_recherche i{
+   flex-wrap: nowrap;
+   display: flex;
+   background-color: #F2F2F2;
+   border: 1px solid #F2F2F2;
+   width: 50px;
+   height: 40px;
+   border-radius: 15px 0px 0px 15px;
    justify-content: center;
    align-items: center;
-   width: 40px;
-   height: 40px;
-   background-color: #F2F2F2;
-   border: 1px #F2F2F2 solid;
-   border-radius: 15px 0px 0px 15px;
 }
-.text_search{
-   background-color: white;
+.text_recherche{
+   background-color: transparent;
    border: none;
-   border-top: 1px #F2F2F2 solid;
-   border-bottom: 1px #F2F2F2 solid;
-   width: 200;
-   height: 40px;
-   padding-left: 15px;
+   border-top: 1px solid #F2F2F2;
+   border-bottom:  1px solid #F2F2F2;
+   height: 100%;
+   width: 60%;
    font-size: 1.2em;
    font-weight: 400;
+   padding-left: 15px;
 }
-.buton_search{
+.button_recherche{
    background-color: #0065FC;
    border: none;
    border-radius: 0px 15px 15px 0px;
    height: 40px;
+   color: white;
    font-weight: 500;
    font-size: 1.3em;
-   color: white;
 }
-/*Section filtres ssur une ligne composé de vignette colorée[bleu #0065FC] en cerclé[bleu clair #DEEBFF] et d'un texte tout deux evelopper dans une bordure [gris #F2F2F2]*/
+@media all and (max-device-width: 575.98px) {
+   .bar_recherche{
+       width: auto;
+   }
+}
+/*filtres*/
 .filtres{
-   display: inline-flex;
-   flex-direction: row;
+   display: flex;
    align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-top: 10px;
+   width: 70%;
 }
 .bt_filtres{
-   margin-left: 20px;
-   background-color: white;
-   border: 2px #F2F2F2 solid;
+   background-color: transparent;
+   border: 2px solid #F2F2F2;
    border-radius: 25px;
    font-size: 1.2em;
-   font-weight: 500;
-   cursor:pointer
-
+   font-weight: 600;
+   justify-content: center;
+   align-items: center;
+   height: 37px;
+   padding-right: 20px;
+   border-left: transparent;
 }
 .bt_filtres i{
+   display: flex;
+   color:#0065FC;
    background-color: #DEEBFF;
-   border: 10px #DEEBFF solid;
+   border: none;
    border-radius: 50%;
-   color: #0065FC;
-   margin-right: 10px;
-} 
-   .pulsation{
-      
+   width: 40px;
+   height: 40px;
+   align-items: center;
+   justify-content: center;
+}
+@media all and (max-device-width: 575.98px) {
+   .filtres{
+       width: auto;
+   }
+   .filtres h2{
+       width: 100%;
+   }
+   .bt_filtres{
+       margin-left: 0;
+       margin: 0px 2px 10px 0px;
+       height: auto;
+   }
+}
+@media all and (max-device-width: 767.98px) {
+   .filtres{
+       flex-wrap: nowrap;
+   }
+   .bt_filtres{
+       margin-right: 20px;
+       padding-right: 20px;
+       font-size: 1em;
+       text-align: center;
+   }
+}
+/* Effet pulsation filtres*/
+.pulsation{
+     
    background:linear-gradient(135deg, #ffffff 0%,#ffffff 100%);
    animation: pulsation 1s infinite alternate
       
       }
-   
+
    @keyframes pulsation{
       
    from{
@@ -155,21 +276,35 @@ span{
       
       }
       
-      }	
+      }  
 .pulsation:hover{
    animation: pulsation_bouton 0.8s ease-in;
 }
-@keyframes pulsation_buton{
+   @keyframes pulsation_buton{
    from{
       box-shadow:0 0 0 -3px hsla(0,0%,100%,0),0 0 0 0 hsl(216,100%,49%)
    }
    to{
       box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(216,100%,94%,0)}
 }
-/*Ligne information une ligne avec l'icone au dédut du bloc à gauche*/
-.info{
-   font-size: 1.em;
+
+@media all and (max-device-width: 575.98px) {
+   .pulsation{
+       animation: none;
+   }
+   .pulsation:hover{
+       animation: none;
+   }   
 }
+@media all and (max-device-width: 767.98px) {
+   .pulsation{
+       animation: none;
+   }
+   .pulsation:hover{
+       animation: none;
+   } 
+}
+/*Ligne information une ligne avec l'icone au dédut du bloc à gauche*/
 .info i{
    background-color: white;
    border: 1px #F2F2F2 solid;
@@ -181,244 +316,314 @@ span{
    margin-top: 10px;
    margin-bottom: 15px;
 }
-/*Section général pour hébergement et populaire*/
-.container{
+@media all and (max-device-width: 575.98px) {
+    .info i{
+        font-size: 10px;
+        margin-right: 7px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+/*section heb_pop*/
+.heb_pop{
    display: flex;
    flex-direction: row;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: space-between;
-   align-items: center;
-   max-width: 1500px;
-   height: 600px;
+   max-width: 1400px;
 }
 /*Section hébergement*/
-.h_marseille{
-   display: flex;
-   align-items: center;
-   margin: 0;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   padding-left: 30px;
-   text-align: left;
-   width: 100%;
-}
-.hebergements{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    background-color:  #F2F2F2;
-    border-radius: 17px;
-    width: 1000px;
-    height: 600px;
-}
-.listehebergements{
-   display: inline-flex;
-   flex-flow: row wrap;
+.listes_heb{
+   flex-wrap: wrap;
    justify-content: space-evenly;
-   align-items: center;
-   border: none;
+   background-color: #F2F2F2;
+   border-radius: 17px;
+   width: 71%;
+   height: 600px;
+}
+.h_marseille{
+    width: 100%;
+    height: auto;
+    margin-left: 30px;
 }
 .heb{
-   display: inline-flex;
-   flex-flow: row wrap;
-   justify-content: center;
-   background-color: white;
-   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
+   flex-wrap: nowrap;
    width: 300px;
    height: 200px;
    border-radius: 25px;
-   margin: 10px;
-  align-content: flex-start;
+   margin-bottom: 10px;
+   justify-content: flex-start;
 }
 .heb img{
-   width: 290px;
+   width: 97%;
    height: 125px;
-   border: 5px solid white;
-   border-radius: 25px 25px 0px 0px ;
+   border: 5px solid transparent;
+   border-radius: 25px 25px 0px 0px;
    object-fit: cover;
 }
 .heb_text{
-   width: 100%;
+    display: flex;
    text-align: left;
-   padding-left: 15px;
+   align-items: flex-start;
+   margin: 0px 0px 0px 20px;
 }
-.fa-star{
-   color: #F2F2F2;
+.heb p{
+   font-size: 1em;
+   font-weight: normal;
 }
-.bleu{
-   color: #0065FC;
+@media all and (max-device-width: 575.98px) {
+   .listes_heb{
+       width: auto;
+       height: auto;
+       background-color: transparent;
+   }
+   .heb{
+       max-width: 100%;
+       height: auto;
+       flex-direction: row;
+       justify-content: flex-start;
+       width: 95%;
+   }
+   .heb img{
+       align-self: center;
+       width: 100%;
+   }
 }
-.afficher{
-   display: flex;
-   align-items: center;
-   margin-left: 30px;
-   font-size: 1.3em;
-   font-weight: bold;
-   text-align: left;
-   width: 100%;
-}
-.afficher a{
-   color: black;
-}
-/*Section populaire, bord droit l'élément est en colonne de trois vignettre qui prend l'ensemble de l'espace donné est composé d'une image en début de bloc et le texte à sa droite. Ne pas oublié étoile bleu de satisfation situé en dessous du texte.*/
-.populaires h3{
+@media all and (max-device-width: 767.98px) {
+   .heb_pop{
+       flex-direction: column-reverse;
+       height: 100%;
+   }
+   .listes_heb{
 
-   margin: 0;
-   padding-top: 10px;
-   padding-left: 20px;
-   padding-bottom: 10px;
-   text-align: left;
+       justify-content: space-around;
+       align-items: center;
+       width: 100%;
+       height: auto;
+       padding-bottom: 5px;
+   }
+   .heb{
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: auto;
+       width: 45%;
+       margin: 10px;
+       justify-content: space-between;
+   }
+   .heb_text{
+       width: 100%;
+   }
+   .heb img{
+       width: 97%;
+       flex-wrap: wrap;
+   }
+}
+/*Afficher plus*/
+.afficher{
    width: 100%;
+   height: auto;
+   margin-left: 10px;
+   font-weight: bold;
+   font-size: 1.2em;
+   margin: 0px 0px 10px 20px;
 }
-h3 i{/*Icone populaire bord droit*/
-   margin-left: 130px;
-}
-.populaires{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
+/*aside populaires*/
+.listes_pop{
+   flex-wrap: nowrap;
    justify-content: space-evenly;
-   background-color:  #F2F2F2;
+   background-color: #F2F2F2;
    border-radius: 17px;
-   width: 400px;
-   height: 600px;
-}
-.listepopulaires{
-   display: inline-flex;
-   flex-flow: column wrap;
-   justify-content: space-evenly;
+   width: 27%;
    align-items: center;
-   border: none;
-   margin: 5px 0px 5px 0px;
+   height: auto;
 }
 .pop{
-   display: inline-flex;
-   flex-flow: row wrap;
-   align-items: center;
-   background-color: white;
-   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
-   width: 360px;
+   flex-wrap: nowrap;
+   width: 90%;
    height: 150px;
    border-radius: 25px;
-   margin: 10px;
-   text-align: center;
 }
-.pop img{
-   width: 150px;
-   height: 140px;
-   border: 5px solid white;
-   border-radius: 25px 0px 0px 25px ;
+.p_pop i{
+   margin-left: 100px;
+}
+.pop p{
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.pop_link{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.pop_img{
+   width: 70%;
    object-fit: cover;
+   height: 140px;
+   border: 5px solid transparent;
+   border-radius: 25px 0px 0px 25px;
    text-align: left;
 }
 .pop_text{
-justify-content: right;
-text-align: center;
-}
-/*Section aside activité. Se situe avant le footer et prend l'ensemble de la page.*/
-.container_activites h3{
    width: 100%;
-   margin-top: 10px;
-   margin-bottom: 20px;
-}
-.container_activites{
    display: flex;
-   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-end;
+   margin: 0px 0px 0px 5px;
+}
+@media all and (max-device-width: 575.98px){
+   .heb_pop{
+       flex-direction: column-reverse;
+   }
+   .listes_pop{
+       width: auto;
+       border: none;
+       border-radius: 0;
+       flex-direction: column;
+       align-content: center;
+       padding-bottom: 10px;
+   }
+   .pop{
+       max-width: 100%;
+       width: 95%;
+       margin-bottom: 10px;
+   }
+}
+@media all and (max-device-width: 767.98px){
+   .p_pop{
+       width: 100%;
+       margin-left: 40px;
+   }
+   .p_pop i{
+       margin-left: 400px;
+   }
+   .listes_pop{
+       width: 100%;
+       height: auto;
+       margin-bottom: 20px;
+       padding-bottom: 20px;
+       justify-content: space-around;
+   }
+   .pop_link{
+
+       height: auto;
+   }
+   .pop{
+       margin: 5px 0px 2px 5px;
+   }
+}
+/*section activités*/
+.listes_act{
    flex-wrap: wrap;
    justify-content: space-between;
-   align-items: stretch;
-   max-width: 1500px;
-   height: 550px;
-   margin-top: 20px;
-  /* background-color: rgb(6, 62, 70);*/
+   height: auto;
+   width: 100%;
 }
-.listeactivites{
-   height: 500px;
-   max-height: 500px;
-   display: flex;
+.act h3{
+   margin-left: 5px;
+}
+.activites{
    flex-wrap: wrap;
    justify-content: space-between;
    align-content: space-between;
-   flex-direction: column;
-}
-.actives{
-   display: flex;
-   flex-wrap: wrap;
+   height: 500px;
+   width: 100%;
 }
 .act{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   max-height: 500px;
+   width: 24%;
    height: 100%;
-   align-content: flex-start;
-   width: 325px;
    background-color: white;
-   justify-content: space-evenly;
-   border-radius: 25px;
-   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 0.1);
+   box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 20%);
+   border-radius: 25px 25px 25px 25px;
+}
+.a_act{
+   width: 100%;
+   height: auto;
 }
 .act_min{
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: space-evenly;
-   height: 225px;
-   width: 325px;
-   background-color: white;
-   border-radius: 25px;
+   height: 45%;
 }
-.act img{
-   display: flex;
+.act_img{
    flex-wrap: wrap;
-   height: 450px;
    width: 100%;
-   border: 0px solid transparent;
+   height: 90%;
    object-fit: cover;
    border-radius: 25px 25px 0px 0px;
 }
 .act_min img{
-   display: flex;
-   flex-wrap: wrap;
-   height: 175px;
+   height: 78%;
 }
-.act_text a{
-   font-weight: bold;
-   font-size: 1em;
-   padding-left: 8px;
-   color: black;
+@media all and (max-device-width: 575.98px){
+   .listes_act{
+       height: auto;
+       margin-bottom: 10px;
+   }
+   .activites{
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: auto;
+   }
+   .activites a{
+       width: 100%;
+       height: 40%;
+       margin: 8px 1px 8px 1px;
+   }
+   .act_img{
+       height: 200px;
+   }
+   .act_min img{
+       height: 200px;
+   }
 }
-.act_text_two a{
-   font-weight: bold;
-   font-size: 1em;
-   padding-left: 8px;
-   color: black;
-}
+@media all and (max-device-width: 767.98px){
+   .listes_act{
+       height: auto;
+       width: auto;
+       text-align: center;
+   }
+   .activites{
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: auto;
+       width: 100%;
+       justify-content: space-around;
+       align-content: space-around;
+   }
+   .activites a{
+       margin: 10px 0px 10px 0px;
+       width: 40%;
+       height: 40%;
 
+   }
+   .act_img{
+       height: 200px;
+   }
+   .act_min img{
+       height: 200px;
+   }
+}
 /*Footer a propos alignement gauche, espacement entre les elements*/
-footer
-{
-   display: inline-flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   text-align: left;
-   justify-content: flex-start;
+.footer {
+   position: relative;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-top: 40px;
    background-color: #F2F2F2;
-   width: 100%;
-   margin-top: 50px;
 }
 .a_propos{
-   display: inline-flex;
-   flex-flow: row wrap;
-   justify-content: space-between;
-   align-items: flex-start;
-   width: 75%;
+   text-align: left;
+   justify-content: space-around;
 }
 .a_propos li{
    padding-bottom: 5px;
 }
-footer h3{
+.footer h3{
    text-align: left;
-   margin: 30px 30px 5px 30px;
+}
+@media all and (max-device-width: 575.98px) {
+   .a_propos{
+      flex-direction: column;
+   }
 }
