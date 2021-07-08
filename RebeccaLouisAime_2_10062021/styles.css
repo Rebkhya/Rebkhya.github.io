@@ -144,7 +144,6 @@ a{
    flex-wrap: nowrap;
    display: flex;
    background-color: #F2F2F2;
-   border: 1px solid #F2F2F2;
    width: 50px;
    height: 40px;
    border-radius: 15px 0px 0px 15px;
@@ -210,7 +209,7 @@ a{
 }
 @media screen and (max-width: 1023px) {
    .filtres{
-       flex-wrap: wrap;
+       flex-wrap: nowrap;
        padding: 0;
    }
    .bt_filtres{
