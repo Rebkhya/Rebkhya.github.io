@@ -612,14 +612,16 @@ main{
    background-color: #F2F2F2;
 }
 .a_propos{
+   align-items: center;
    text-align: left;
-   justify-content: space-around;
+   justify-content: flex-start;
 }
-.a_propos li{
-   padding-bottom: 5px;
+.a_propos article{
+   text-align: justify;
+   margin-left: 50px;
 }
-.footer h3{
-   text-align: left;
+.a_propos h3{
+   margin-left: 40px;
 }
 @media screen and (max-device-width: 766.98px) {
    .a_propos{
