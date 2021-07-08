@@ -5,13 +5,8 @@
   La police du site est Raleway.*/
   /*Element general*/
   body{
-   display: flex;
    justify-content: center;
    font-family: 'Raleway', sans-serif;
-}
-.main_container{
-   max-width: 1400px;
-   margin-top: 10px;
 }
 .flex_row{
    display: flex;
@@ -27,6 +22,7 @@
    border-radius: 25px;
 }
 h1{
+   margin: 0;
    font-weight: bold;
    font-size: 1.9em;
 }
@@ -35,8 +31,9 @@ h2{
    font-size: 1.6em;
 }
 h3{
+   margin: 0;
    font-weight: 600;
-   font-size: 1.3em;
+   font-size: 1.2em;
    overflow-wrap: break-word;
 }
 ul{
@@ -51,25 +48,10 @@ a{
    color: #F2F2F2;
    padding-bottom: 10px;
    width: 100%;
+   height: auto;
 }
 .bleu{
    color: #0065FC;
-}
-@media screen and (max-device-width: 766.98px) {
-   .main_container{
-       width: auto;
-       height: auto;
-       margin: 0;
-   }
-}
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px) {
-    .main_container{
-        width: auto;
-        height: auto;
-    }
-    h1{
-        font-size: 1.5em;
-    }
 }
 /*Header*/
 .header{
@@ -96,7 +78,7 @@ a{
    border-top: 2px solid transparent;
    font-size: 1em;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 766.98px) {
    .header{
        display: flex;
        flex-direction: row;
@@ -134,7 +116,7 @@ a{
    color: #0065FC;
    align-self: flex-end;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 766.98px) {
    .bt_menu:hover{
        border-bottom: 2px solid #0065FC;
        border-top: none;
@@ -147,11 +129,6 @@ a{
        padding: 15px 5px 15px 5px;
    }
 }
-/*Main*/
-main{
-   padding-top: 20px;
-   padding-bottom: 30px;
-}
 /*section presentation, recherche, filtres et information*/
 /*presentation*/
 .presentation{
@@ -161,7 +138,7 @@ main{
 /*barre de recherche*/
 .bar_recherche{
    display: flex;
-   margin: 15px 0px 0px 0pX;
+   margin: 15px 0px 5px 0pX;
 }
 .bar_recherche i{
    flex-wrap: nowrap;
@@ -194,7 +171,7 @@ main{
    font-weight: 500;
    font-size: 1.3em;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 766.98px) {
    .bar_recherche{
        width: auto;
    }
@@ -205,7 +182,7 @@ main{
    align-items: center;
    justify-content: space-between;
    flex-wrap: wrap;
-   margin-top: 10px;
+   margin-top: 15px;
    width: 70%;
 }
 .bt_filtres{
@@ -231,28 +208,29 @@ main{
    align-items: center;
    justify-content: center;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 1023px) {
    .filtres{
-       width: auto;
-   }
-   .filtres h2{
-       width: 100%;
-   }
-   .bt_filtres{
-       margin-left: 0;
-       margin: 0px 2px 10px 0px;
-       height: auto;
-   }
-}
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px) {
-   .filtres{
-       flex-wrap: nowrap;
+       flex-wrap: wrap;
    }
    .bt_filtres{
        margin-right: 20px;
        padding-right: 20px;
        font-size: 1em;
        text-align: center;
+   }
+}
+@media screen and (max-width: 766.98px) {
+   .filtres{
+      width: auto;
+      justify-content: flex-start;
+   }
+   .filtres h2{
+      width: 100%;
+   }
+   .bt_filtres{
+      margin-left: 0;
+      margin: 0px 2px 10px 0px;
+      height: auto;
    }
 }
 /* Effet pulsation filtres*/
@@ -287,7 +265,14 @@ main{
    to{
       box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(216,100%,94%,0)}
 }
-
+@media screen and (max-device-width: 1023px) {
+   .pulsation{
+       animation: none;
+   }
+   .pulsation:hover{
+       animation: none;
+   } 
+}
 @media screen and (max-device-width: 766.98px) {
    .pulsation{
        animation: none;
@@ -295,14 +280,6 @@ main{
    .pulsation:hover{
        animation: none;
    }   
-}
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px) {
-   .pulsation{
-       animation: none;
-   }
-   .pulsation:hover{
-       animation: none;
-   } 
 }
 /*Ligne information une ligne avec l'icone au dédut du bloc à gauche*/
 .info i{
@@ -316,7 +293,7 @@ main{
    margin-top: 10px;
    margin-bottom: 15px;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 1023px) {
     .info i{
         font-size: 10px;
         margin-right: 7px;
@@ -337,8 +314,7 @@ main{
    justify-content: space-evenly;
    background-color: #F2F2F2;
    border-radius: 17px;
-   width: 71%;
-   height: 600px;
+   width: 66%;
 }
 .h_marseille{
     width: 100%;
@@ -355,7 +331,7 @@ main{
 }
 .heb img{
    width: 97%;
-   height: 125px;
+   height: 120px;
    border: 5px solid transparent;
    border-radius: 25px 25px 0px 0px;
    object-fit: cover;
@@ -370,25 +346,7 @@ main{
    font-size: 1em;
    font-weight: normal;
 }
-@media screen and (max-device-width: 766.98px) {
-   .listes_heb{
-       width: auto;
-       height: auto;
-       background-color: transparent;
-   }
-   .heb{
-       max-width: 100%;
-       height: auto;
-       flex-direction: row;
-       justify-content: flex-start;
-       width: 95%;
-   }
-   .heb img{
-       align-self: center;
-       width: 100%;
-   }
-}
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px) {
+@media screen and (max-width: 1023px) {
    .heb_pop{
        flex-direction: column-reverse;
        height: 100%;
@@ -411,10 +369,29 @@ main{
    }
    .heb_text{
        width: 100%;
+       overflow-wrap: break-word;
    }
    .heb img{
        width: 97%;
        flex-wrap: wrap;
+   }
+}
+@media screen and (max-width: 766.98px) {
+   .listes_heb{
+       width: auto;
+       height: auto;
+       background-color: transparent;
+   }
+   .heb{
+       max-width: 100%;
+       height: auto;
+       flex-direction: row;
+       justify-content: flex-start;
+       width: 95%;
+   }
+   .heb img{
+       align-self: center;
+       width: 97%;
    }
 }
 /*Afficher plus*/
@@ -432,7 +409,7 @@ main{
    justify-content: space-evenly;
    background-color: #F2F2F2;
    border-radius: 17px;
-   width: 27%;
+   width: 32%;
    align-items: center;
    height: auto;
 }
@@ -442,12 +419,16 @@ main{
    height: 150px;
    border-radius: 25px;
 }
+.p_pop{
+   width: 90%;
+}
 .p_pop i{
-   margin-left: 100px;
+   float: right; 
 }
 .pop p{
   font-size: 1em;
   font-weight: normal;
+  width: auto;
 }
 .pop_link{
    display: flex;
@@ -471,7 +452,26 @@ main{
    align-items: flex-end;
    margin: 0px 0px 0px 5px;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 1023px){
+   .listes_pop{
+       width: 100%;
+       height: auto;
+       margin-bottom: 20px;
+       padding-bottom: 20px;
+       justify-content: space-around;
+   }
+   .pop_link{
+      width: 50%;
+       height: auto;
+   }
+   .pop{
+       margin: 5px 0px 2px 5px;
+   }
+   .pop_text{
+      width: auto;
+   }
+}
+@media screen and (max-width: 766.98px) {
    .heb_pop{
        flex-direction: column-reverse;
    }
@@ -489,29 +489,7 @@ main{
        margin-bottom: 10px;
    }
 }
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px){
-   .p_pop{
-       width: 100%;
-       margin-left: 40px;
-   }
-   .p_pop i{
-       margin-left: 400px;
-   }
-   .listes_pop{
-       width: 100%;
-       height: auto;
-       margin-bottom: 20px;
-       padding-bottom: 20px;
-       justify-content: space-around;
-   }
-   .pop_link{
 
-       height: auto;
-   }
-   .pop{
-       margin: 5px 0px 2px 5px;
-   }
-}
 /*section activités*/
 .listes_act{
    flex-wrap: wrap;
@@ -520,7 +498,8 @@ main{
    width: 100%;
 }
 .act h3{
-   margin-left: 5px;
+   margin-left: 20px;
+   justify-content: center;
 }
 .activites{
    flex-wrap: wrap;
@@ -553,29 +532,7 @@ main{
 .act_min img{
    height: 78%;
 }
-@media screen and (max-device-width: 766.98px) {
-   .listes_act{
-       height: auto;
-       margin-bottom: 10px;
-   }
-   .activites{
-       flex-direction: row;
-       flex-wrap: wrap;
-       height: auto;
-   }
-   .activites a{
-       width: 100%;
-       height: 40%;
-       margin: 8px 1px 8px 1px;
-   }
-   .act_img{
-       height: 200px;
-   }
-   .act_min img{
-       height: 200px;
-   }
-}
-@media screen and (min-width: 766.99px) and (max-device-width: 1023px){
+@media screen and (max-width: 1023px){
    .listes_act{
        height: auto;
        width: auto;
@@ -602,29 +559,49 @@ main{
        height: 200px;
    }
 }
+@media screen and (max-width: 766.98px) {
+   .listes_act{
+       height: auto;
+       margin-bottom: 10px;
+   }
+   .activites{
+       flex-direction: row;
+       flex-wrap: wrap;
+       height: auto;
+   }
+   .activites a{
+       width: 100%;
+       height: 40%;
+       margin: 8px 1px 8px 1px;
+   }
+   .act_img{
+       height: 200px;
+   }
+   .act_min img{
+       height: 200px;
+   }
+}
 /*Footer a propos alignement gauche, espacement entre les elements*/
-.footer {
-   position: relative;
+.a_propos{
    bottom: 0;
    left: 0;
    right: 0;
-   margin-top: 40px;
    background-color: #F2F2F2;
-}
-.a_propos{
-   align-items: center;
    text-align: left;
    justify-content: flex-start;
+   margin-top: 40px;
+   padding-top: 10px;
 }
 .a_propos article{
    text-align: justify;
-   margin-left: 50px;
+   margin-right: 50px;
 }
 .a_propos h3{
    margin-left: 40px;
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 766.98px) {
    .a_propos{
       flex-direction: column;
    }
+
 }
