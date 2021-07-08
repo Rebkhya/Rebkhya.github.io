@@ -265,7 +265,7 @@ a{
    to{
       box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(216,100%,94%,0)}
 }
-@media screen and (max-device-width: 1023px) {
+@media screen and (max-width: 1023px) {
    .pulsation{
        animation: none;
    }
@@ -273,7 +273,7 @@ a{
        animation: none;
    } 
 }
-@media screen and (max-device-width: 766.98px) {
+@media screen and (max-width: 766.98px) {
    .pulsation{
        animation: none;
    }
