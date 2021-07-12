@@ -75,7 +75,7 @@ a{
    border-top: 2px solid transparent;
    font-size: 1em;
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .header{
        display: flex;
        flex-direction: row;
@@ -113,7 +113,7 @@ a{
    color: #0065FC;
    align-self: flex-end;
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .bt_menu:hover{
        border-bottom: 2px solid #0065FC;
        border-top: none;
@@ -167,7 +167,7 @@ a{
    font-weight: 500;
    font-size: 1.3em;
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .bar_recherche{
        width: auto;
    }
@@ -204,7 +204,7 @@ a{
    align-items: center;
    justify-content: center;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991.98px) {
    .filtres{
        flex-wrap: wrap;
        padding: 0;
@@ -216,7 +216,7 @@ a{
        text-align: center;
    }
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .filtres{
       width: auto;
       justify-content: flex-start;
@@ -262,7 +262,7 @@ a{
    to{
       box-shadow:0 0 0 10px hsla(0,0%,100%,0),0 0 0 13px hsla(216,100%,94%,0)}
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991.98px) {
    .pulsation{
        animation: none;
    }
@@ -270,7 +270,7 @@ a{
        animation: none;
    } 
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .pulsation{
        animation: none;
    }
@@ -290,7 +290,7 @@ a{
    margin-top: 10px;
    margin-bottom: 15px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991.98px) {
     .info i{
         font-size: 10px;
         margin-right: 7px;
@@ -302,7 +302,7 @@ a{
    display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
-   justify-content: space-between;
+   justify-content: space-around;
    max-width: 100%;
 }
 /*Section hébergement*/
@@ -343,7 +343,7 @@ a{
    font-size: 1em;
    font-weight: normal;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991.98px) {
    .heb_pop{
        flex-direction: column-reverse;
        height: 100%;
@@ -373,7 +373,7 @@ a{
        flex-wrap: wrap;
    }
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .listes_heb{
        width: auto;
        height: auto;
@@ -406,15 +406,16 @@ a{
    justify-content: space-evenly;
    background-color: #F2F2F2;
    border-radius: 17px;
-   width: 32%;
+   width: 30%;
    align-items: center;
    height: auto;
 }
 .pop{
    flex-wrap: nowrap;
-   width: 90%;
+   width: 85%;
    height: 150px;
    border-radius: 25px;
+   margin-bottom: 20px;
 }
 .p_pop{
    width: 90%;
@@ -433,6 +434,7 @@ a{
    align-items: flex-start;
    flex-wrap: wrap;
    justify-content: center;
+   width: 100%;
 }
 .pop_img{
    width: 70%;
@@ -449,7 +451,7 @@ a{
    align-items: flex-end;
    margin: 0px 0px 0px 5px;
 }
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 991.98px){
    .listes_pop{
        width: 100%;
        height: auto;
@@ -469,7 +471,7 @@ a{
       margin-right: 10px;
    }
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .heb_pop{
        flex-direction: column-reverse;
    }
@@ -487,27 +489,30 @@ a{
        margin-bottom: 10px;
    }
 }
-
 /*section activités*/
 .listes_act{
    flex-wrap: wrap;
    justify-content: space-between;
    height: auto;
    width: 100%;
+   margin-top: 20px;
+}
+.listes_act h2{
+   margin-left: 30px;
 }
 .act h3{
-   margin-left: 20px;
+   margin-left: 10px;
    justify-content: center;
 }
 .activites{
    flex-wrap: wrap;
    justify-content: space-between;
-   align-content: space-between;
-   height: 500px;
+   align-content: space-evenly;
+   height: 400px;
    width: 100%;
 }
 .act{
-   width: 24%;
+   width: 22%;
    height: 100%;
    background-color: white;
    box-shadow: 2px 2px 8px 3px rgba(150, 150, 150, 20%);
@@ -530,7 +535,7 @@ a{
 .act_min img{
    height: 78%;
 }
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 991.98px){
    .listes_act{
        height: auto;
        width: auto;
@@ -557,7 +562,7 @@ a{
        height: 200px;
    }
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .listes_act{
        height: auto;
        margin-bottom: 10px;
@@ -597,7 +602,7 @@ a{
 .a_propos h3{
    margin-left: 40px;
 }
-@media screen and (max-width: 766.98px) {
+@media screen and (max-width: 575.98px) {
    .a_propos{
       flex-direction: column;
    }
