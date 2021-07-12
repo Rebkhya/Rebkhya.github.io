@@ -33,7 +33,7 @@ h2{
 h3{
    margin: 0;
    font-weight: 600;
-   font-size: 1.2em;
+   font-size: 1.1em;
    overflow-wrap: break-word;
 }
 ul{
@@ -209,7 +209,7 @@ a{
 }
 @media screen and (max-width: 1023px) {
    .filtres{
-       flex-wrap: nowrap;
+       flex-wrap: wrap;
        padding: 0;
    }
    .bt_filtres{
@@ -469,6 +469,7 @@ a{
    }
    .pop_text{
       width: auto;
+      margin-right: 10px;
    }
 }
 @media screen and (max-width: 766.98px) {
