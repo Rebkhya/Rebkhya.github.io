@@ -297,7 +297,7 @@ a{
         padding: 5px 10px 5px 10px;
     }
 }
-/*section heb_pop*/
+/*section heb_pop contient les deux element hebergements et populaire*/
 .heb_pop{
    display: flex;
    flex-direction: row;
@@ -305,7 +305,18 @@ a{
    justify-content: space-around;
    max-width: 100%;
 }
-/*Section hébergement*/
+@media screen and (max-width: 991.98px){
+   .heb_pop{
+      flex-direction: column-reverse;
+      height: 100%;
+  }
+}
+@media screen and (max-width: 575.98px){
+   .heb_pop{
+      flex-direction: column-reverse;
+  }
+}
+/*Section hébergement à gauche environ 65% de l'espace*/
 .listes_heb{
    flex-wrap: wrap;
    justify-content: space-evenly;
@@ -344,10 +355,6 @@ a{
    font-weight: normal;
 }
 @media screen and (max-width: 991.98px) {
-   .heb_pop{
-       flex-direction: column-reverse;
-       height: 100%;
-   }
    .listes_heb{
 
        justify-content: space-around;
@@ -400,7 +407,7 @@ a{
    font-size: 1.2em;
    margin: 40px 0px 10px 20px;
 }
-/*aside populaires*/
+/*aside plus populaire sur la droite eviron 30%*/
 .listes_pop{
    flex-wrap: nowrap;
    justify-content: space-evenly;
@@ -472,9 +479,6 @@ a{
    }
 }
 @media screen and (max-width: 575.98px) {
-   .heb_pop{
-       flex-direction: column-reverse;
-   }
    .listes_pop{
        width: auto;
        border: none;
