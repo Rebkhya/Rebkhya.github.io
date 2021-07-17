@@ -29,7 +29,7 @@
     <p>
     <h3>Lien vers mes projets OpenClassrooms:</h3>
     <ul>
-           <ol>Projet 2 : <a href="https://rebkhya.github.io/RebeccaLouisAime_2_10062021/Reservia.html"><span>Transformez une maquette en site web</span></a> </ol>
+           <ol>Projet 2 : <a href="https://rebkhya.github.io/RebeccaLouisAime_2_10062021/"><span>Transformez une maquette en site web</span></a> </ol>
            <ol>Projet 3 : <a href="#"><span>Dynamisez une page web avec des animations css</span></a> </ol>
            <ol>Projet 4 : <a href="#"><span>Obtimisez un site web exitant</span></a> </ol>
        </ul>
